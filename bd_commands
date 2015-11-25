@@ -1,0 +1,30 @@
+show databases;
+create database livros_exercicio_new;
+use livros_exercicio_new;
+create table livros
+(
+cod_livro int auto_increment,
+titulo varchar(200),
+autor varchar(200),
+valor varchar(200),
+genero varchar(200),
+cliente varchar(200),
+primary key(cod_livro)
+);
+show tables;
+desc livros;
+insert into livros (titulo, autor, valor, genero, cliente)
+values ('O Ladrao de Raios', 'Ricky Riordan', 'R$ 30,00', 'Aventura, Mitologia', 'Patricia Nascimento');
+insert into livros (titulo, autor, valor, genero, cliente)
+values ('Mar de Monstros', 'Ricky Riordan', 'R$ 40,00', 'Aventura, Ficcao', 'Robson Pinheiro');
+insert into livros (titulo, autor, valor, genero, cliente)
+values ('Legend of Zelda: A lenda de Hyrule', 'Yakamoto', 'R$ 70,00', 'Aventura, Ficcao, Games', 'Luiz Antonio');
+insert into livros (titulo, autor, valor, genero, cliente)
+values ('Steve Jobs: O Homem que Pensava DIferente', 'Jasper Petterson', 'R$ 35,55', 'Biografia, Auto Ajuda', 'Petterson Robson Nascimento');
+select * from livros;
+update livros set genero='Ficcao, Aventura' where cod_livro=1;
+update livros set cliente='João da Silva' where cod_livro=2;
+select * from livros;
+delete from livros where cod_livro=3;
+delete from livros where cod_livro=4;
+select * from livros;
